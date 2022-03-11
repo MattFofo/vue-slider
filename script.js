@@ -2,7 +2,9 @@
 const app = new Vue({
     el: '#root',
     data: {
-        arrSlides: [{
+        indexActiveThumb: 0,
+        arrSlides: [
+        {
             image: '01.jpg',
             title: 'Svezia',
             text: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.'
@@ -28,5 +30,7 @@ const app = new Vue({
             text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.'
         }
     
-    ]}
-})
+        ]
+    }
+});
+
