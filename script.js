@@ -34,7 +34,7 @@ const app = new Vue({
     },
     methods: {
         nextThumb() {
-            if (this.indexActiveThumb == this.arrSlides.lenght - 1) {
+            if (this.indexActiveThumb == this.arrSlides.length - 1) {
                 this.indexActiveThumb = 0;
             } else {
                 this.indexActiveThumb++;
@@ -43,12 +43,15 @@ const app = new Vue({
         },
         previousThumb() {
             if (this.indexActiveThumb == 0) {
-                this.indexActiveThumb = this.arrSlides.lenght - 1;
+                this.indexActiveThumb = this.arrSlides.length - 1;
             } else {
                 this.indexActiveThumb--;
             }
         },
 
+    },
+    created() {
+        setInterval(this.nextThumb, 3000)
     }
 });
 
