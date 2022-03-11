@@ -13,11 +13,11 @@
 		<div class="slider">
 			<div class="slide">
 
-				<img :src="'img/' + arrSlides[indexActiveThumb].image" alt="Svezia">
+				<img :src="'img/' + arrSlides[indexActiveThumb].image" :alt="arrSlides[indexActiveThumb].title">
 
 				<div class="slide-contents">
-					<h2 class="slide-title">Svezia</h2>
-					<p class="slide-text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam, cumque provident totam omnis, magnam dolores dolorum corporis.</p>
+					<h2 class="slide-title">{{ arrSlides[indexActiveThumb].title }}</h2>
+					<p class="slide-text">{{ arrSlides[indexActiveThumb].text }}</p>
 				</div>
 			</div>
 
