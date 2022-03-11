@@ -30,7 +30,27 @@ const app = new Vue({
             text: 'Et temporibus voluptatum suscipit tempore aliquid deleniti aut veniam inventore eligendi ex ad ullam.'
         }
     
-        ]
+        ],
+    },
+    methods: {
+        nextThumb() {
+            if (this.indexActiveThumb == this.arrSlides.lenght - 1) {
+                this.indexActiveThumb = 0;
+            } else {
+                this.indexActiveThumb++;
+
+            }
+        },
+        previousThumb() {
+            if (this.indexActiveThumb == 0) {
+                this.indexActiveThumb = this.arrSlides.lenght - 1;
+            } else {
+                this.indexActiveThumb--;
+            }
+        },
+
     }
 });
+
+
 
