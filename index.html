@@ -11,7 +11,7 @@
 <body>
 	<div id="root">
 		<div class="slider">
-			<div class="slide">
+			<div class="slide" @mouseover="stopAutoPlay" @mouseout="startAutoPlay">
 
 				<img :src="'img/' + arrSlides[indexActiveThumb].image" :alt="arrSlides[indexActiveThumb].title">
 

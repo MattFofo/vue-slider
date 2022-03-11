@@ -3,6 +3,7 @@ const app = new Vue({
     el: '#root',
     data: {
         indexActiveThumb: 0,
+        timerAutoplay: null,
         arrSlides: [
         {
             image: '01.jpg',
@@ -48,10 +49,16 @@ const app = new Vue({
                 this.indexActiveThumb--;
             }
         },
+        startAutoPlay() {
+            this.timerAutoplay = setInterval(this.nextThumb, 3000);
+        },
+        stopAutoPlay() {
+            clearInterval(this.timerAutoplay);
+        }
 
     },
     created() {
-        setInterval(this.nextThumb, 3000)
+        this.startAutoPlay();
     }
 });
 
