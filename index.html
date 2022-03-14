@@ -30,7 +30,12 @@
 
 				<button @click="previousThumb" class="btn-control btn-previus">&and;</button>
 				<button @click="nextThumb" class="btn-control btn-next">&or;</button>
+				
+				
 			</div>
+		</div>
+		<div class="container-circle-index">
+			<div v-for="(thumb, index) in arrSlides" @click="indexActiveThumb = index" class="circle-index" :class="index == indexActiveThumb ? 'active' : ''"></div>
 		</div>
 	</div>
 
